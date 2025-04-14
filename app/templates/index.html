@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex flex-col items-center min-h-screen p-4">
+
+  <div class="w-full max-w-xl bg-white rounded-xl shadow-md p-6">
+    <h1 class="text-2xl font-bold mb-4">💬 Chat with Gemini</h1>
+
+    <div id="chat-box" class="space-y-4 max-h-[400px] overflow-y-auto mb-4 text-sm"></div>
+
+    <div class="flex gap-2">
+      <input id="message-input" class="flex-1 border rounded px-4 py-2" placeholder="Type your message..." />
+      <button onclick="sendMessage()" class="bg-blue-600 text-white px-4 py-2 rounded">Send</button>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
